@@ -20,7 +20,7 @@ build_script:
       $ErrorActionPreference = "Stop"
       
       $env:RELEASE_NUMBER = 3
-      $env:HASH = "204c98f"
+      $env:HASH = "dc68424"
 
       Update-AppveyorBuild -Version "1.${env:build}-${env:RELEASE_NUMBER}-${env:HASH}"
 
