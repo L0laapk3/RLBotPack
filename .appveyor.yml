@@ -22,7 +22,7 @@ build_script:
       $env:RELEASE_NUMBER = 3
       $env:HASH = "dc68424"
 
-      Update-AppveyorBuild -Version "1.${env:build}-${env:RELEASE_NUMBER}-${env:HASH}"
+      Update-AppveyorBuild -Version "1.${env:APPVEYOR_BUILD_NUMBER}-${env:RELEASE_NUMBER}-${env:HASH}"
 
 artifacts: off
    
