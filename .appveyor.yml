@@ -31,7 +31,7 @@ build_script:
       $env:HASH = git rev-parse --short HEAD
 
       $history = Invoke-RestMethod -Uri "https://ci.appveyor.com/api/projects/$env:APPVEYOR_ACCOUNT_NAME/$env:APPVEYOR_PROJECT_SLUG/history?recordsNumber=$env:RECORDS_NUMBER" -Headers $headers -Method Get
-      $latestRelease = $history.builds | Where-Object {$_.status -eq "success" -and $_.version -match "-"} | Sort-Object -Property created -Descending | Select-Object -First 1
+      $latestRelease = $history.builds | Where-Object {$_.status -eq "success" -and $_.version -match "-" -and "pullRequestId" -in $_.PSobject.Properties.Name} | Sort-Object -Property created -Descending | Select-Object -First 1
       Write-Host ("{0}" -f $latestRelease[0])
       Write-Host ("{0}" -f $latestRelease[1])
       Write-Host ("{0}" -f $latestRelease[2])
