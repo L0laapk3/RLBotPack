@@ -1,12 +1,12 @@
 image: Visual Studio 2019
 platform:
    - amd64
-
+   
 environment:
    APPVEYOR_API_TOKEN:
-      secure: QaFZHMmYjMehNXvfY7mqBcQlmHg1Vz/s1/PcFnw8rqs=
+      secure: qTt+0485sfAXM2Sz+QLZ+jjziNf4One8/A062QFN1a4=
    GITHUB_API_TOKEN:
-      secure: K+Ve9A1PjCY37IApiUQW3x6HyTcwvnwwo4OUGk90pPwMgtyjTt9/3uy0Nj3DFhc1
+      secure: TpVl9vErdKkXR/RUlVtUDfeITAn5BtOhG3JxiFJRGp85c3B7boCFf6CDOxNgMr/m
    DEPLOY_BRANCH: 'master'
 
 branches:
